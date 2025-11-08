@@ -1,25 +1,122 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Recover Password | Velonic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully responsive admin theme" name="description" />
+    <meta content="Techzaa" name="author" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+
+    <!-- Theme Config Js -->
+    <script src="{{ asset('assets/js/config.js') }}"></script>
+
+    <!-- App css -->
+    <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-style" />
+
+    <!-- Icons css -->
+    <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="authentication-bg">
+
+    <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5 position-relative">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-8 col-lg-10">
+                    <div class="card overflow-hidden">
+                        <div class="row g-0">
+                            <!-- Left Image -->
+                            <div class="col-lg-6 d-none d-lg-block p-2">
+                                <img src="{{ asset('assets/images/auth-img.jpg') }}" alt="Auth Image"
+                                    class="img-fluid rounded h-100">
+                            </div>
+
+                            <!-- Forgot Password Form -->
+                            <div class="col-lg-6">
+                                <div class="d-flex flex-column h-100">
+                                    <div class="auth-brand p-4">
+                                        <a href="{{ url('/') }}" class="logo-light">
+                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo"
+                                                height="22">
+                                        </a>
+                                        <a href="{{ url('/') }}" class="logo-dark">
+                                            <img src="{{ asset('assets/images/logo-dark.png') }}" alt="dark logo"
+                                                height="22">
+                                        </a>
+                                    </div>
+
+                                    <div class="p-4 my-auto">
+                                        <h4 class="fs-20">Forgot Password?</h4>
+                                        <p class="text-muted mb-3">
+                                            Enter your email address and we'll send you a link to reset your password.
+                                        </p>
+
+                                        <!-- Session Status -->
+                                        <x-auth-session-status class="mb-4 text-success fw-semibold"
+                                            :status="session('status')" />
+
+                                        <!-- Laravel Password Reset Form -->
+                                        <form method="POST" action="{{ route('password.email') }}">
+                                            @csrf
+
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email address</label>
+                                                <input class="form-control" type="email" id="email" name="email"
+                                                    value="{{ old('email') }}" required autofocus
+                                                    placeholder="Enter your email">
+                                                <x-input-error :messages="$errors->get('email')" class="mt-2 text-danger small" />
+                                            </div>
+
+                                            <div class="mb-0 text-start">
+                                                <button class="btn btn-soft-primary w-100" type="submit">
+                                                    <i class="ri-loop-left-line me-1 fw-bold"></i>
+                                                    <span class="fw-bold">Reset Password</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <!-- end form -->
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="text-dark-emphasis">
+                        Back To
+                        <a href="{{ route('login') }}" class="text-dark fw-bold ms-1 text-decoration-underline">
+                            Log In
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
     </div>
+    <!-- end page -->
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <footer class="footer footer-alt fw-medium">
+        <span class="text-dark-emphasis">
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            © Velonic - Theme by Techzaa
+        </span>
+    </footer>
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+    <!-- Vendor js -->
+    <script src="{{ asset('assets/js/vendor.min.js') }}"></script>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+    <!-- App js -->
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
+</body>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</html>
