@@ -16,39 +16,51 @@
 
     <!-- Icons css -->
     <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <style>
+        body.authentication-bg {
+            background: url('{{ asset('public/assets/images/gym-background.jpg') }}') center center / cover no-repeat;
+            background-attachment: fixed;
+        }
+
+        .card {
+            backdrop-filter: blur(4px);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .footer {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body class="authentication-bg position-relative">
+
     <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5 position-relative">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xxl-8 col-lg-10">
-                    <div class="card overflow-hidden">
+                    <div class="card overflow-hidden border-0 shadow-lg">
                         <div class="row g-0">
                             <!-- Left Side Image -->
                             <div class="col-lg-6 d-none d-lg-block p-2">
                                 <img src="{{ asset('public/assets/images/gym-img.jpg') }}" alt="Auth Image"
-                                    class="img-fluid rounded h-100">
+                                    class="img-fluid rounded h-100 w-100 object-fit-cover">
                             </div>
 
                             <!-- Right Side Login Form -->
                             <div class="col-lg-6">
                                 <div class="d-flex flex-column h-100">
-                                    {{-- <div class="auth-brand p-4">
-                                        <a href="{{ url('/') }}" class="logo-light">
-                                            <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="logo"
-                                                height="22">
-                                        </a>
-                                        <a href="{{ url('/') }}" class="logo-dark">
-                                            <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="Gym Logo"
-                                                height="100" width="200">
-                                        </a>
-                                    </div> --}}
-
                                     <div class="p-4 my-auto">
-                                        <h4 class="fs-20">Sign In</h4>
-                                        <p class="text-muted mb-3">Enter your email and password to access your account.
-                                        </p>
+
+                                        <div class="text-center mb-4">
+                                            <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="Gym Logo"
+                                                height="80" class="mb-2">
+                                            <h4 class="fs-20 fw-semibold mt-2">Sign In</h4>
+                                            <p class="text-muted mb-3">Enter your email and password to access your
+                                                account.</p>
+                                        </div>
 
                                         <!-- Laravel Login Form -->
                                         <form method="POST" action="{{ route('login') }}">
@@ -86,13 +98,10 @@
                                             </div>
 
                                             <!-- Remember Me -->
-                                            <div class="mb-3">
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="remember_me"
-                                                        name="remember">
-                                                    <label class="form-check-label" for="remember_me">Remember
-                                                        me</label>
-                                                </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="remember_me"
+                                                    name="remember">
+                                                <label class="form-check-label" for="remember_me">Remember me</label>
                                             </div>
 
                                             <!-- Submit -->
@@ -128,11 +137,11 @@
             </div>
 
             <!-- Signup Link -->
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-12 text-center">
-                    <p class="text-dark-emphasis">
+                    <p class="text-white">
                         Don't have an account?
-                        <a href="{{ route('register') }}" class="text-dark fw-bold ms-1 text-decoration-underline">
+                        <a href="{{ route('register') }}" class="text-white fw-bold text-decoration-underline">
                             Sign up
                         </a>
                     </p>
@@ -142,11 +151,11 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer footer-alt fw-medium text-center">
-        <span class="text-dark">
+    <footer class="footer footer-alt fw-medium text-center mt-4">
+        <span class="text-white">
             <script>
                 document.write(new Date().getFullYear())
-            </script> © {{ config('app.name') }} - Theme by Techzaa
+            </script> © {{ config('app.name') }} - Bipin Yadav
         </span>
     </footer>
 
