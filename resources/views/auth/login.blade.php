@@ -27,23 +27,23 @@
                         <div class="row g-0">
                             <!-- Left Side Image -->
                             <div class="col-lg-6 d-none d-lg-block p-2">
-                                <img src="{{ asset('public/assets/images/auth-img.jpg') }}" alt="Auth Image"
+                                <img src="{{ asset('public/assets/images/gym-img.jpg') }}" alt="Auth Image"
                                     class="img-fluid rounded h-100">
                             </div>
 
                             <!-- Right Side Login Form -->
                             <div class="col-lg-6">
                                 <div class="d-flex flex-column h-100">
-                                    <div class="auth-brand p-4">
+                                    {{-- <div class="auth-brand p-4">
                                         <a href="{{ url('/') }}" class="logo-light">
-                                            <img src="{{ asset('public/assets/images/logo.png') }}" alt="logo"
+                                            <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="logo"
                                                 height="22">
                                         </a>
                                         <a href="{{ url('/') }}" class="logo-dark">
-                                            <img src="{{ asset('public/assets/images/logo-dark.png') }}" alt="dark logo"
-                                                height="22">
+                                            <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="Gym Logo"
+                                                height="100" width="200">
                                         </a>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="p-4 my-auto">
                                         <h4 class="fs-20">Sign In</h4>
