@@ -8,7 +8,7 @@
     <meta content="Gym registration page with Velonic theme" name="description" />
     <meta content="Techzaa" name="author" />
 
-    <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('public/assets/images/gym-logo-1.jpg') }}">
     <script src="{{ asset('public/assets/js/config.js') }}"></script>
 
     <!-- App CSS -->

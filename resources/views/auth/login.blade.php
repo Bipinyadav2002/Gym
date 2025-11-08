@@ -6,7 +6,7 @@
     <title>Login | {{ config('app.name') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Laravel Login Page styled with Velonic theme" name="description" />
-    <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('public/assets/images/gym-logo-1.jpg') }}">
 
     <!-- Theme Config Js -->
     <script src="{{ asset('public/assets/js/config.js') }}"></script>
