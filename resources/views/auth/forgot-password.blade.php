@@ -9,16 +9,16 @@
     <meta content="Techzaa" name="author" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
 
     <!-- Theme Config Js -->
-    <script src="{{ asset('assets/js/config.js') }}"></script>
+    <script src="{{ asset('public/assets/js/config.js') }}"></script>
 
     <!-- App css -->
-    <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-style" />
+    <link href="{{ asset('public/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" id="app-style" />
 
     <!-- Icons css -->
-    <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('public/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="authentication-bg">
@@ -31,7 +31,7 @@
                         <div class="row g-0">
                             <!-- Left Image -->
                             <div class="col-lg-6 d-none d-lg-block p-2">
-                                <img src="{{ asset('assets/images/auth-img.jpg') }}" alt="Auth Image"
+                                <img src="{{ asset('public/assets/images/auth-img.jpg') }}" alt="Auth Image"
                                     class="img-fluid rounded h-100">
                             </div>
 
@@ -40,11 +40,11 @@
                                 <div class="d-flex flex-column h-100">
                                     <div class="auth-brand p-4">
                                         <a href="{{ url('/') }}" class="logo-light">
-                                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo"
+                                            <img src="{{ asset('public/assets/images/logo.png') }}" alt="logo"
                                                 height="22">
                                         </a>
                                         <a href="{{ url('/') }}" class="logo-dark">
-                                            <img src="{{ asset('assets/images/logo-dark.png') }}" alt="dark logo"
+                                            <img src="{{ asset('public/assets/images/logo-dark.png') }}" alt="dark logo"
                                                 height="22">
                                         </a>
                                     </div>
@@ -113,10 +113,10 @@
     </footer>
 
     <!-- Vendor js -->
-    <script src="{{ asset('assets/js/vendor.min.js') }}"></script>
+    <script src="{{ asset('public/assets/js/vendor.min.js') }}"></script>
 
     <!-- App js -->
-    <script src="{{ asset('assets/js/app.min.js') }}"></script>
+    <script src="{{ asset('public/assets/js/app.min.js') }}"></script>
 </body>
 
 </html>

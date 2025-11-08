@@ -7,20 +7,20 @@
                 <!-- Logo light -->
                 <a href="index.html" class="logo-light">
                     <span class="logo-lg">
-                        <img src="assets/images/logo.png" alt="logo">
+                        <img src="public/assets/images/logo.png" alt="logo">
                     </span>
                     <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="small logo">
+                        <img src="public/assets/images/logo-sm.png" alt="small logo">
                     </span>
                 </a>
 
                 <!-- Logo Dark -->
                 <a href="index.html" class="logo-dark">
                     <span class="logo-lg">
-                        <img src="assets/images/logo-dark.png" alt="dark logo">
+                        <img src="public/assets/images/logo-dark.png" alt="dark logo">
                     </span>
                     <span class="logo-sm">
-                        <img src="assets/images/logo-sm.png" alt="small logo">
+                        <img src="public/assets/images/logo-sm.png" alt="small logo">
                     </span>
                 </a>
             </div>
@@ -102,7 +102,7 @@
                 <a class="nav-link dropdown-toggle arrow-none nav-user" data-bs-toggle="dropdown" href="#"
                     role="button" aria-haspopup="false" aria-expanded="false">
                     <span class="account-user-avatar">
-                        <img src="assets/images/users/avatar-1.jpg" alt="user-image" width="32"
+                        <img src="public/assets/images/users/avatar-1.jpg" alt="user-image" width="32"
                             class="rounded-circle">
                     </span>
                     <span class="d-lg-block d-none">
