@@ -6,7 +6,7 @@
             <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="logo" style="height: 60px;">
         </span>
         <span class="logo-sm">
-            <img src="{{ asset('public/assets/images/logo-sm.png') }}" alt="small logo" style="height: 40px;">
+            <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="small logo" style="height: 40px;">
         </span>
     </a>
 
@@ -16,7 +16,7 @@
             <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="dark logo" style="height: 60px;">
         </span>
         <span class="logo-sm">
-            <img src="{{ asset('public/assets/images/logo-sm.png') }}" alt="small logo" style="height: 40px;">
+            <img src="{{ asset('public/assets/images/gym-logo-1.jpg') }}" alt="small logo" style="height: 40px;">
         </span>
     </a>
 
